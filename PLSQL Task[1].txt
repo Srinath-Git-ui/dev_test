@@ -1,0 +1,48 @@
+#1
+-- CALCULATE BONUS BASED ON JOB HISTORY AND COMMISSION
+-- 40% IF JOB HISTORY IS PRESENT, 25% IF COMMISSION IS PRESENT OTHERWISE 35%
+#2
+-- Calculate salary for employees by taking commission and bonus into account
+-- Commission pct is null then give 10% commission
+-- else 5%
+#3
+-- Department_Name  | Manager_Name | City | Person Who Is Getting Max Salary 
+-- Absence Of Manager Will Be Represent As - 
+
+
+IT                             Alexander       Southlake            Alexander
+Shipping                       Adam            South San Francisco  Adam
+Administration                 Jennifer        Seattle              Jennifer
+Purchasing                     Den             Seattle              Den
+Executive                      Steven          Seattle              Steven
+
+#4
+Administration      Jennifer           1    0
+Marketing           Michael            2    1
+Purchasing          Den Mark           6    0
+Human Resources     Susan              1    0
+Shipping            Adam              45    2
+IT                  Alexander          6    1
+Public Relations    Hermann            1    0
+Sales               John              33    3
+Executive           Steven             3    2
+
+
+#5
+Name             : Neena
+Experience(year) : 36
+Manager          : Steven
+Jobs Count       : 2
+
+#6
+Administration
+-------------------------------------------
+Jennifer
+Total No of Employees : 1
+Marketing
+-------------------------------------------
+Michael
+Pat
+Total No of Employees : 2
+
+

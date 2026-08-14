@@ -34,15 +34,6 @@ Experience(year) : 36
 Manager          : Steven
 Jobs Count       : 2
 
-#6
-Administration
--------------------------------------------
-Jennifer
-Total No of Employees : 1
-Marketing
--------------------------------------------
-Michael
-Pat
-Total No of Employees : 2
 
 
+helooo

@@ -6,17 +6,17 @@ AS
         FROM emp;
 
     TYPE trec1 IS RECORD (
-        vid     emp.id%TYPE,
-        vname   emp.name%TYPE,
-        vsalary emp.salary%TYPE
+        v_id     emp.id%TYPE,
+        v_name   emp.name%TYPE,
+        v_salary emp.salary%TYPE
     );
 
     TYPE type1 IS TABLE OF trec1;
 
     v1 type1;
 
-    verrline NUMBER;
-    verrcode VARCHAR2(1000);
+    v_errline NUMBER;
+    v_errcode VARCHAR2(1000);
 
 BEGIN
 
@@ -32,9 +32,9 @@ BEGIN
 
             INSERT INTO emp_bkp
             VALUES (
-                v1(i).vid,
-                v1(i).vname,
-                v1(i).vsalary
+                v1(i).v_id,
+                v1(i).v_name,
+                v1(i).v_salary
             );
 
     END LOOP;
@@ -49,13 +49,13 @@ EXCEPTION
 
         FOR i IN 1 .. SQL%BULK_EXCEPTIONS.COUNT LOOP
 
-            verrline := SQL%BULK_EXCEPTIONS(i).ERROR_INDEX;
-            verrcode := SQL%BULK_EXCEPTIONS(i).ERROR_CODE;
+            v_errline := SQL%BULK_EXCEPTIONS(i).ERROR_INDEX;
+            v_errcode := SQL%BULK_EXCEPTIONS(i).ERROR_CODE;
 
             INSERT INTO err_log
             VALUES (
-                verrline,
-                verrcode
+                v_errline,
+                v_errcode
             );
 
         END LOOP;
